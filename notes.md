@@ -12,3 +12,7 @@ Spring Boot/ MicroService development
    Services like Logging, Cache, third party integrations etc.
 
    Spring Boot - Spring Boot starters, Auto Configuration, Production Ready features. Actuators - Actuator module provides all of spring boots production ready features.
+
+   SpringBoot Annotations
+   @RestController -> @Controller + @ResponseBody
+   @SpringBootApplication -> @Configuration + @EnableAutoConfiguration + @ComponentScan
