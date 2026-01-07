@@ -16,7 +16,8 @@ Spring Boot/ MicroService development
    SpringBoot Annotations
    @RestController -> @Controller + @ResponseBody
    @SpringBootApplication -> @Configuration + @EnableAutoConfiguration + @ComponentScan
-Best Practices
+   
+2. Best Practices
    Use DTOs: Don't expose entities directly in REST APIs
    Lazy Loading: Use FetchType.LAZY for relationships to avoid N+1 queries
    Transactions: Always use @Transactional for write operations
