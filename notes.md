@@ -25,3 +25,6 @@ Spring Boot/ MicroService development
    Validation: Use Bean Validation (@NotNull, @Size, etc.)
    Pagination: Use Pageable for large datasets
    Projections: Use Spring Data projections for read-only queries
+
+3. Global exception Handelrs
+   @RestControllerAdvice , @ControllerAdvice
