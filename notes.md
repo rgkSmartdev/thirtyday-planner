@@ -28,3 +28,22 @@ Spring Boot/ MicroService development
 
 3. Global exception Handelrs
    @RestControllerAdvice , @ControllerAdvice
+
+Accessing ENV variable in spring boot
+   // 1. @Value (simple)
+@Value("${spring.datasource.url:default-url}")
+private String url;
+
+// 2. Environment abstraction (very flexible)
+@Autowired
+private Environment env;
+
+String password = env.getProperty("spring.datasource.password");
+
+// 3. Best: @ConfigurationProperties (strongly typed)
+@ConfigurationProperties(prefix = "app.auth")
+public class AuthProperties {
+    private String jwtSecret;   // → APP_AUTH_JWT_SECRET env var
+    private Duration tokenLifetime = Duration.ofHours(2);
+    // getters/setters
+}
